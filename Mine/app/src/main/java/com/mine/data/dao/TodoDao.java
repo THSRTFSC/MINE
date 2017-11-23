@@ -1,4 +1,4 @@
-package com.mine.db.dao;
+package com.mine.data.dao;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -6,7 +6,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 
-import com.mine.db.entity.Todo;
+import com.mine.data.entity.Todo;
 
 import java.util.List;
 

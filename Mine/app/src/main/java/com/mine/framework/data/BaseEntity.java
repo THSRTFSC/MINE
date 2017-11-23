@@ -1,4 +1,4 @@
-package com.mine.framework.base;
+package com.mine.framework.data;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

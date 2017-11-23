@@ -10,8 +10,8 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
-import com.mine.db.DatabaseCreator;
-import com.mine.db.entity.User;
+import com.mine.data.DatabaseCreator;
+import com.mine.data.entity.User;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

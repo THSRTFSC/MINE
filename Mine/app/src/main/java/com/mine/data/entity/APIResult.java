@@ -1,4 +1,4 @@
-package com.mine.db.entity;
+package com.mine.data.entity;
 
 /**
  * Copyright(c) 2016. LiBing Inc. All rights reserved.

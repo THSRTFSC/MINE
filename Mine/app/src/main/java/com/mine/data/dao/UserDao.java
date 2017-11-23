@@ -1,4 +1,4 @@
-package com.mine.db.dao;
+package com.mine.data.dao;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -7,7 +7,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 
-import com.mine.db.entity.User;
+import com.mine.data.entity.User;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 

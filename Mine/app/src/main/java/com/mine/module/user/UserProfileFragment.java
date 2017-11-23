@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mine.R;
-import com.mine.db.entity.User;
+import com.mine.data.entity.User;
 import com.mine.framework.MINEApplication;
 
 /**

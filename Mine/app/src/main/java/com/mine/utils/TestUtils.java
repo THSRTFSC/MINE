@@ -2,8 +2,8 @@ package com.mine.utils;
 
 import android.app.Activity;
 
-import com.mine.db.entity.Todo;
-import com.mine.db.entity.TodoItem;
+import com.mine.data.entity.Todo;
+import com.mine.data.entity.TodoItem;
 
 import java.util.ArrayList;
 import java.util.Date;

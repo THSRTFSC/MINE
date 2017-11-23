@@ -2,7 +2,7 @@ package com.mine.utils.okhttp;
 
 import android.util.Log;
 
-import com.mine.db.entity.APIResult;
+import com.mine.data.entity.APIResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -4,7 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 
-import com.mine.db.entity.Todo;
+import com.mine.data.entity.Todo;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

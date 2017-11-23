@@ -1,4 +1,4 @@
-package com.mine.db;
+package com.mine.data;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
@@ -8,9 +8,11 @@ import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.mine.framework.data.AppDatabase;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static com.mine.db.AppDatabase.DATABASE_NAME;
+import static com.mine.framework.data.AppDatabase.DATABASE_NAME;
 
 
 /**

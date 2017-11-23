@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.mine.R;
 import com.mine.constants.Constants;
-import com.mine.db.entity.APIResult;
+import com.mine.data.entity.APIResult;
 import com.mine.framework.MINEApplication;
 import com.mine.utils.JsonUtils;
 import com.mine.utils.okhttp.OkHttpProxy;

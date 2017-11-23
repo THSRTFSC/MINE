@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
-package com.mine.db;
+package com.mine.data;
 
 
-import com.mine.db.entity.User;
+import com.mine.data.entity.User;
+import com.mine.framework.data.AppDatabase;
 
 /** Generates dummy data and inserts them into the database */
-class DatabaseInitUtil {
+public class DatabaseInitUtil {
 
-    static void initializeDb(AppDatabase db) {
+    public static void initializeDb(AppDatabase db) {
         User user = new User();
         user.setUserMobile("15157157761");
         user.setUserEmail("libing@myhexin.com");

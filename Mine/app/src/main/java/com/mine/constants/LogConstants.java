@@ -9,4 +9,8 @@ package com.mine.constants;
 public class LogConstants {
 
     public static final String LOG_OKHTTP = "OkHttp";
+
+    public static final String LOG_DATABASE = "database";
+
+    public static final String LOG_APPLICATION = "application";
 }

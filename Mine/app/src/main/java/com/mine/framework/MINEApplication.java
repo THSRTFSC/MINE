@@ -3,6 +3,8 @@ package com.mine.framework;
 import android.app.Application;
 import android.content.Context;
 
+import com.mine.framework.data.DatabaseHelper;
+
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
  * <p>
@@ -19,6 +21,7 @@ public class MINEApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sMIMEApplication = this;
+        DatabaseHelper.getInstance().initDatabase();
     }
 
     public Context getMIMEAppContext() {

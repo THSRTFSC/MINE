@@ -1,4 +1,4 @@
-package com.mine.db.entity;
+package com.mine.data.entity;
 
 import android.arch.persistence.room.Entity;
 

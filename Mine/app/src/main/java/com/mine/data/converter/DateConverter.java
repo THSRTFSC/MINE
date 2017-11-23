@@ -1,4 +1,4 @@
-package com.mine.db.converter;
+package com.mine.data.converter;
 
 import android.arch.persistence.room.TypeConverter;
 
