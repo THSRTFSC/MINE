@@ -3,7 +3,7 @@ package com.mine.module.todo;
 import android.arch.lifecycle.LiveData;
 
 import com.mine.data.dao.TodoDao;
-import com.mine.data.entity.Todo;
+import com.mine.data.entity.TodoList;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
@@ -19,7 +19,7 @@ public class TodoRepository {
         mTodoDao = todoDao;
     }
 
-    public LiveData<Todo> getTodo(String todoId) {
+    public LiveData<TodoList> getTodo(String todoId) {
         return mTodoDao.findById(todoId);
     }
 }

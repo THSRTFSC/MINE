@@ -6,7 +6,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 
-import com.mine.data.entity.Todo;
+import com.mine.data.entity.TodoList;
 
 import java.util.List;
 
@@ -21,16 +21,16 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface TodoDao {
 
-    @Query("SELECT * FROM todo WHERE id = :todoId")
-    LiveData<Todo> findById(String todoId);
+    @Query("SELECT * FROM TodoList WHERE id = :todoId")
+    LiveData<TodoList> findById(String todoId);
 
-    @Query("SELECT * FROM todo WHERE date = :date")
-    LiveData<Todo> findByDate(String date);
+    @Query("SELECT * FROM TodoList WHERE date = :date")
+    LiveData<TodoList> findByDate(String date);
 
-    @Query("SELECT * FROM todo")
-    LiveData<List<Todo>> getAll();
+    @Query("SELECT * FROM TodoList")
+    LiveData<List<TodoList>> getAll();
 
     @Insert(onConflict = REPLACE)
-    void insert(Todo todo);
+    void insert(TodoList todo);
 
 }

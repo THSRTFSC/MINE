@@ -2,12 +2,9 @@ package com.mine.data.entity;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
-import java.util.Date;
-import java.util.List;
+import com.mine.framework.data.BaseEntity;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
@@ -15,30 +12,21 @@ import java.util.List;
  * Created by Alan on 17/10/7.
  */
 
-@Entity(tableName = "todo", indices = {@Index(value = "date", unique = true)})
-public class Todo {
+@Entity(tableName = "todo")
+public class Todo extends BaseEntity {
 
     @PrimaryKey
     @ColumnInfo(name = "id")
     private long mId;
 
-    @ColumnInfo(name = "status")
-    private int mStatus;
+    @ColumnInfo(name = "todo_list_id")
+    private long mTodoListId;
 
-    @ColumnInfo(name = "create_time")
-    private Date mCreateTime;
+    @ColumnInfo(name = "detail")
+    private String mDetail;
 
-    @ColumnInfo(name = "update_time")
-    private Date mUpdateTime;
-
-    @ColumnInfo(name = "date")
-    private String mDate;
-
-    @ColumnInfo(name = "content")
-    private String mContent;
-
-    @Ignore
-    private List<TodoItem> mTodoItems;
+    @ColumnInfo(name = "priority")
+    private int mPriority;
 
     public long getId() {
         return mId;
@@ -48,51 +36,27 @@ public class Todo {
         mId = id;
     }
 
-    public int getStatus() {
-        return mStatus;
+    public long getTodoListId() {
+        return mTodoListId;
     }
 
-    public void setStatus(int status) {
-        mStatus = status;
+    public void setTodoListId(long todoListId) {
+        mTodoListId = todoListId;
     }
 
-    public Date getCreateTime() {
-        return mCreateTime;
+    public String getDetail() {
+        return mDetail;
     }
 
-    public void setCreateTime(Date createTime) {
-        mCreateTime = createTime;
+    public void setDetail(String detail) {
+        mDetail = detail;
     }
 
-    public Date getUpdateTime() {
-        return mUpdateTime;
+    public int getPriority() {
+        return mPriority;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        mUpdateTime = updateTime;
-    }
-
-    public String getDate() {
-        return mDate;
-    }
-
-    public void setDate(String date) {
-        mDate = date;
-    }
-
-    public String getContent() {
-        return mContent;
-    }
-
-    public void setContent(String content) {
-        mContent = content;
-    }
-
-    public List<TodoItem> getTodoItems() {
-        return mTodoItems;
-    }
-
-    public void setTodoItems(List<TodoItem> todoItems) {
-        mTodoItems = todoItems;
+    public void setPriority(int priority) {
+        mPriority = priority;
     }
 }

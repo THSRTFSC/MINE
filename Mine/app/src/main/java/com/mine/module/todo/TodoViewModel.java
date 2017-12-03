@@ -4,7 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 
-import com.mine.data.entity.Todo;
+import com.mine.data.entity.TodoList;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
@@ -14,7 +14,7 @@ import com.mine.data.entity.Todo;
 
 public class TodoViewModel extends AndroidViewModel {
 
-    private LiveData<Todo> mTodo;
+    private LiveData<TodoList> mTodo;
 
     private TodoRepository mTodoRepository;
 
@@ -22,7 +22,7 @@ public class TodoViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<Todo> getTodo() {
+    public LiveData<TodoList> getTodo() {
         return mTodo;
     }
 

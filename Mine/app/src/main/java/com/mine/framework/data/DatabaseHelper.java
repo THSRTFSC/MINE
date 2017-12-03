@@ -4,7 +4,6 @@ import android.arch.persistence.room.Room;
 import android.util.Log;
 
 import com.mine.constants.LogConstants;
-import com.mine.data.DatabaseInitUtil;
 import com.mine.framework.MINEApplication;
 
 /**
@@ -66,8 +65,7 @@ public class DatabaseHelper {
                                 AppDatabase.class,
                                 AppDatabase.DATABASE_NAME)
                                 .build();
-
-                        DatabaseInitUtil.initializeDb(mDatabase);
+//                        DatabaseInitUtil.initializeDb(mDatabase);
                     }
                 }
         ).start();

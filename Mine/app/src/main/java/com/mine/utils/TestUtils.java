@@ -2,8 +2,8 @@ package com.mine.utils;
 
 import android.app.Activity;
 
+import com.mine.data.entity.TodoList;
 import com.mine.data.entity.Todo;
-import com.mine.data.entity.TodoItem;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,13 +35,13 @@ public class TestUtils {
 
 
 
-    public static Todo createTodo() {
-        Todo todo = new Todo();
+    public static TodoList createTodo() {
+        TodoList todo = new TodoList();
         todo.setStatus(0);
         todo.setContent("Test-Test");
         todo.setCreateTime(new Date());
         todo.setUpdateTime(new Date());
-        todo.setTodoItems(new ArrayList<TodoItem>());
+        todo.setTodoItems(new ArrayList<Todo>());
         todo.setDate("20171008");
         return todo;
     }

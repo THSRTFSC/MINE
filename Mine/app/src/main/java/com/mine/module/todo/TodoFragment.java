@@ -49,9 +49,9 @@ public class TodoFragment extends BaseFragment implements TodoContract.View {
         String todoDate = DateUtils.getTodayDateString();
         mTodoViewModel = ViewModelProviders.of(this).get(TodoViewModel.class);
         mTodoViewModel.init(todoDate);
-//        mTodoViewModel.getTodo().observe(this, new Observer<Todo>() {
+//        mTodoViewModel.getTodo().observe(this, new Observer<TodoList>() {
 //            @Override
-//            public void onChanged(@Nullable Todo todo) {
+//            public void onChanged(@Nullable TodoList todo) {
 //                Log.d(TAG, "onChanged() called with: todo = [" + todo + "]");
 //            }
 //        });
