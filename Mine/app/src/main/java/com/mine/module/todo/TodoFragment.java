@@ -60,7 +60,7 @@ public class TodoFragment extends BaseFragment implements TodoContract.View {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_todo, container, false);
+        View view = inflater.inflate(R.layout.fragment_todo_list, container, false);
         TextView title = view.findViewById(R.id.title);
         title.setOnClickListener(new View.OnClickListener() {
             @Override

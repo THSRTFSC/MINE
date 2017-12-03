@@ -7,16 +7,18 @@ import android.arch.persistence.room.TypeConverters;
 import com.mine.data.converter.DateConverter;
 import com.mine.data.dao.TodoDao;
 import com.mine.data.dao.UserDao;
+import com.mine.data.entity.Todo;
 import com.mine.data.entity.TodoList;
 import com.mine.data.entity.User;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
  * <p>
+ *     数据库ROOM
  * Created by Alan on 17/9/14.
  */
 
-@Database(entities = {User.class, TodoList.class}, version = 1, exportSchema = false)
+@Database(entities = {User.class, TodoList.class, Todo.class}, version = 1, exportSchema = false)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
 

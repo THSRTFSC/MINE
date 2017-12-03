@@ -7,6 +7,10 @@ import java.util.Date;
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
  * <p>
+ *     数据表公共父类，声明公有字段
+ *     1. 当前记录的状态，已删除，未删除，默认未删除
+ *     2. 当前记录的创建时间
+ *     3. 当前记录的最近一次修改时间
  * Created by Alan on 17/10/7.
  */
 public class BaseEntity {

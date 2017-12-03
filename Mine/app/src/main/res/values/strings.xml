@@ -14,7 +14,7 @@
     <string name="account_not_longer_enough">请输入至少8个字符！</string>
     <string name="password_not_longer_enough">请输入至少20个字符！</string>
     <string name="login_fail">登录失败，请重新检查用户名和密码！</string>
-    <string name="fragment_todo_title">Todo Lists</string>
+    <string name="fragment_todo_list_title">今日待办</string>
     <string name="fragment_todo_edit">编辑</string>
 
 </resources>
