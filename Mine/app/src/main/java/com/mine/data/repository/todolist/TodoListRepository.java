@@ -16,5 +16,4 @@ public class TodoListRepository extends BaseRepository {
 
     private BaseLocalData mLocalData;
 
-    private
 }
