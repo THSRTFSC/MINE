@@ -38,7 +38,7 @@ public class TestUtils {
     public static TodoList createTodo() {
         TodoList todo = new TodoList();
         todo.setStatus(0);
-        todo.setContent("Test-Test");
+//        todo.setContent("Test-Test");
         todo.setCreateTime(new Date());
         todo.setUpdateTime(new Date());
         todo.setTodoItems(new ArrayList<Todo>());

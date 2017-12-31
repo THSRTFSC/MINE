@@ -1,6 +1,9 @@
 package com.mine.module.splash;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.Window;
 
 import com.mine.R;
 import com.mine.framework.base.BaseActivity;
@@ -16,6 +19,12 @@ import com.mine.utils.TestUtils;
 public class SplashActivity extends BaseActivity {
 
     private static final String TAG = "SplashActivity";
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public void setFragment() {

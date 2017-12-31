@@ -21,13 +21,13 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface TodoDao {
 
-    @Query("SELECT * FROM TodoList WHERE id = :todoId")
+    @Query("SELECT * FROM todo_list WHERE id = :todoId")
     LiveData<TodoList> findById(String todoId);
 
-    @Query("SELECT * FROM TodoList WHERE date = :date")
+    @Query("SELECT * FROM todo_list WHERE date = :date")
     LiveData<TodoList> findByDate(String date);
 
-    @Query("SELECT * FROM TodoList")
+    @Query("SELECT * FROM todo_list")
     LiveData<List<TodoList>> getAll();
 
     @Insert(onConflict = REPLACE)
