@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabBar">
+        <attr name="tab_count" format="integer"/>
+        <attr name="default_selected_index" format="integer"/>
+        <attr name="android:entries" />
+    </declare-styleable>
+</resources>

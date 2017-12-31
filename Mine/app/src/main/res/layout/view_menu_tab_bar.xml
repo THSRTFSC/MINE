@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mine.view.tabbar.MenuTabBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mine="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    mine:tab_count="5"
+    mine:default_selected_index="2"
+    android:entries="@array/menu_tab_names">
+
+</com.mine.view.tabbar.MenuTabBar>

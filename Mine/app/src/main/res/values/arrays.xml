@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_tab_names">
+        <item>数据</item>
+        <item>计划</item>
+        <item>待办</item>
+        <item>博客</item>
+        <item>设置</item>
+    </string-array>
+</resources>

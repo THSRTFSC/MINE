@@ -7,6 +7,12 @@
 
     <FrameLayout android:id="@+id/fragment"
                  android:layout_width="match_parent"
-                 android:layout_height="match_parent"/>
+                 android:layout_height="@dimen/width_0dp"
+                 android:layout_weight="1"/>
+
+    <include
+        android:layout_height="@dimen/app_tab_bar_height"
+        android:layout_width="match_parent"
+        layout="@layout/view_menu_tab_bar"/>
 
 </LinearLayout>
