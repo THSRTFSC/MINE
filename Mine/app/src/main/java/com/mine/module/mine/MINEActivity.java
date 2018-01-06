@@ -33,5 +33,6 @@ public class MINEActivity extends BaseActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), todoFragment, R.id.fragment);
         }
         new TodoPresenter(todoFragment);
+        showTabBar();
     }
 }

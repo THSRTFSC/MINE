@@ -9,10 +9,19 @@ import android.util.AttributeSet;
  * Created by Alan on 17/12/31.
  */
 
-public interface TabBar {
+public interface TabBar extends OnTabClickListener {
+
+    String TAG = TabBar.class.getSimpleName();
+
+    int TAB_ORIENTATION_VERTICAL = 0;
+
+    int TAB_ORIENTATION_HORIZONTAL = 1;
 
     void initTabBar(Context context, AttributeSet attrs);
 
-    void onTabClick(int clickedTabIndex);
+    void createTabView(CharSequence[] tabNames, int orientation);
 
+    void show();
+
+    void hide();
 }

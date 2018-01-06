@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     mine:tab_count="5"
     mine:default_selected_index="2"
+    mine:tab_orientation="HORIZONTAL"
     android:entries="@array/menu_tab_names">
 
 </com.mine.view.tabbar.MenuTabBar>

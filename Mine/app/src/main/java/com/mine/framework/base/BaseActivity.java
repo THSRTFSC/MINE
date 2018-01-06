@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.mine.R;
+import com.mine.view.tabbar.MenuTabBar;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
@@ -21,6 +22,19 @@ public abstract class BaseActivity extends AppCompatActivity {
         setFragment();
     }
 
+    public void showTabBar() {
+        MenuTabBar tabBar = this.findViewById(R.id.menu_tab_bar);
+        if (tabBar != null) {
+            tabBar.show();
+        }
+    }
+
+    public void hideTabBar() {
+        MenuTabBar tabBar = this.findViewById(R.id.menu_tab_bar);
+        if (tabBar != null) {
+            tabBar.hide();
+        }
+    }
 
     public abstract void setFragment();
 }

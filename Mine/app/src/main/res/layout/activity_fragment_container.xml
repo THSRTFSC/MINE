@@ -11,8 +11,10 @@
                  android:layout_weight="1"/>
 
     <include
+        android:id="@+id/menu_tab_bar"
         android:layout_height="@dimen/app_tab_bar_height"
         android:layout_width="match_parent"
+        android:visibility="gone"
         layout="@layout/view_menu_tab_bar"/>
 
 </LinearLayout>
