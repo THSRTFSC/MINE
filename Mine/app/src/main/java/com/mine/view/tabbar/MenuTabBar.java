@@ -16,11 +16,15 @@ import com.mine.R;
 import com.mine.framework.log.Logger;
 import com.mine.utils.ScreenUtils;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
  * <p>
  *     1. 根据配置初始化当前的TAB
  *     2. 可扩展为后台配置TAB
+ *     3. 文字样式TabBarText
  * </p>
  * Created by Alan on 17/12/31.
  */
@@ -48,6 +52,9 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
     private int mTabOrientation = TAB_ORIENTATION_HORIZONTAL;
 
     private CharSequence[] mMenuTabNames = getResources().getStringArray(R.array.menu_tab_names);
+
+    private final Set<OnTabClickListener> mOnTabClickListeners = new HashSet<>();
+
 
     public MenuTabBar(Context context) {
         this(context, null);
@@ -130,6 +137,11 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
     }
 
     @Override
+    public boolean isShowing() {
+        return this.getVisibility() == View.VISIBLE;
+    }
+
+    @Override
     public void onTabClicked(int clickedTabIndex, int lastSelectedTabIndex) {
         Logger.d(TAG, "onTabClicked() called with: clickedTabIndex = [" + clickedTabIndex + "], lastSelectedTabIndex = [" + lastSelectedTabIndex + "]");
     }
@@ -138,5 +150,13 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
     public void onClick(View v) {
         mLastSelectecTabIndex = mSelectedTabIndex;
         mSelectedTabIndex = (int) v.getTag();
+    }
+
+    public void addTabClickListener(OnTabClickListener onTabClickListener) {
+        this.mOnTabClickListeners.add(onTabClickListener);
+    }
+
+    public void removeTabClickListener(OnTabClickListener onTabClickListener) {
+        this.mOnTabClickListeners.remove(onTabClickListener);
     }
 }

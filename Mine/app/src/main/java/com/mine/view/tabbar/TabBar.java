@@ -24,4 +24,6 @@ public interface TabBar extends OnTabClickListener {
     void show();
 
     void hide();
+
+    boolean isShowing();
 }
