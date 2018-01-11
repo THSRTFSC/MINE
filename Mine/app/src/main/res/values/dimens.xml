@@ -10,7 +10,13 @@
     <dimen name="height_1px">1px</dimen>
 
     <!-- Text size -->
-    <dimen name="text_size_normal">24dp</dimen>
+    <dimen name="text_size_tiny">12dp</dimen>
+    <dimen name="text_size_small">14dp</dimen>
+    <dimen name="text_size_normal">16dp</dimen>
+    <dimen name="text_size_large">18dp</dimen>
+
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
 
     <!-- UI -->
     <dimen name="app_title_height">56dp</dimen>

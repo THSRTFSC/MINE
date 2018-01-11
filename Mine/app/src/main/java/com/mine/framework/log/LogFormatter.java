@@ -6,13 +6,13 @@ package com.mine.framework.log;
  * Created by Alan on 18/1/6.
  */
 
-public final class LogFormater {
+public final class LogFormatter {
 
-    private LogFormater() {
+    private LogFormatter() {
 
     }
 
-    public static String logFormater(String... messages) {
+    public static String logFormatter(String... messages) {
         if (messages == null) {
             throw new NullPointerException("Illegal argument exception");
         }

@@ -45,7 +45,7 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
 
     private int mTabCount = DEFAULT_TAB_COUNT;
 
-    private int mLastSelectecTabIndex = DEFAULT_SELECT_TAB_INDEX;
+    private int mLastSelectedTabIndex = DEFAULT_SELECT_TAB_INDEX;
 
     private int mSelectedTabIndex = DEFAULT_SELECT_TAB_INDEX;
 
@@ -55,6 +55,7 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
 
     private final Set<OnTabClickListener> mOnTabClickListeners = new HashSet<>();
 
+    private TextView[] mViewHolders;
 
     public MenuTabBar(Context context) {
         this(context, null);
@@ -113,15 +114,23 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
         LinearLayout.LayoutParams tabItemParams = new LayoutParams(tabWidth, LayoutParams.MATCH_PARENT);
         tabItemParams.gravity = Gravity.CENTER_VERTICAL;
         int index = 0;
+        mViewHolders = new TextView[mTabCount];
         for (CharSequence tabName : tabNames) {
             tabItem = new TextView(getContext());
             tabItem.setTag(index);
             tabItem.setText(tabName);
-            tabItem.setTextColor(getResources().getColor(R.color.colorBlack));
             tabItem.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
             tabItem.setGravity(Gravity.CENTER);
             tabItem.setOnClickListener(this);
+            if (index == mSelectedTabIndex) {
+                tabItem.setSelected(true);
+                tabItem.setTextColor(getResources().getColor(R.color.colorTheme));
+            } else {
+                tabItem.setSelected(false);
+                tabItem.setTextColor(getResources().getColor(R.color.colorThemeLight));
+            }
             this.addView(tabItem, tabItemParams);
+            mViewHolders[index] = tabItem;
             index++;
         }
     }
@@ -142,14 +151,17 @@ public class MenuTabBar extends LinearLayout implements TabBar, View.OnClickList
     }
 
     @Override
-    public void onTabClicked(int clickedTabIndex, int lastSelectedTabIndex) {
-        Logger.d(TAG, "onTabClicked() called with: clickedTabIndex = [" + clickedTabIndex + "], lastSelectedTabIndex = [" + lastSelectedTabIndex + "]");
-    }
-
-    @Override
     public void onClick(View v) {
-        mLastSelectecTabIndex = mSelectedTabIndex;
+        mLastSelectedTabIndex = mSelectedTabIndex;
         mSelectedTabIndex = (int) v.getTag();
+        Logger.d(TAG, "Current clicked tab index = " + mSelectedTabIndex);
+        if (mViewHolders != null) {
+            mViewHolders[mLastSelectedTabIndex].setTextColor(getResources().getColor(R.color.colorThemeLight));
+            mViewHolders[mSelectedTabIndex].setTextColor(getResources().getColor(R.color.colorTheme));
+        }
+        for (OnTabClickListener listener : mOnTabClickListeners) {
+            listener.onTabClicked(mSelectedTabIndex, mLastSelectedTabIndex);
+        }
     }
 
     public void addTabClickListener(OnTabClickListener onTabClickListener) {

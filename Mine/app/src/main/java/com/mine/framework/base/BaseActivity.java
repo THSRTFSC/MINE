@@ -36,5 +36,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 设置当前的页面内容
+     */
     public abstract void setFragment();
 }

@@ -15,7 +15,7 @@ import com.mine.framework.base.BaseFragment;
  * Created by Alan on 17/8/27.
  */
 
-public class MINEFragment extends BaseFragment implements MINEContract.View{
+public class MINEFragment extends BaseFragment {
 
     private MINEContract.Presenter mPresenter;
 
@@ -31,8 +31,4 @@ public class MINEFragment extends BaseFragment implements MINEContract.View{
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    @Override
-    public void setPresenter(MINEContract.Presenter presenter) {
-        this.mPresenter = presenter;
-    }
 }

@@ -37,7 +37,7 @@ public final class Logger {
     }
 
     public static void i(String tag, String... messages) {
-        Log.i(tag, LogFormater.logFormater(messages));
+        Log.i(tag, LogFormatter.logFormatter(messages));
     }
 
     public static void i(String tag, String message, Throwable throwable) {

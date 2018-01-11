@@ -9,7 +9,7 @@ import android.util.AttributeSet;
  * Created by Alan on 17/12/31.
  */
 
-public interface TabBar extends OnTabClickListener {
+public interface TabBar {
 
     String TAG = TabBar.class.getSimpleName();
 
